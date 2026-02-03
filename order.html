@@ -12,8 +12,33 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      .hero-section {
+        background: url('images/order-hero.jpg') center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+      }
+      .hero-overlay {
+        background-color: rgba(0,0,0,0.5);
+        padding: 50px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+      .call-to-action {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+      }
+      form .form-control {
+        margin-bottom: 15px;
+      }
+    </style>
 </head>
 <body>
 
@@ -38,8 +63,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section" style="background-image: url('images/order-hero.jpg');">
-      <div class="container hero-overlay">
+    <header class="hero-section">
+      <div class="hero-overlay">
         <h1 class="display-4">Place Your Order Online</h1>
         <p class="lead">Fast, safe, and reliable delivery of medicines and healthcare products.</p>
       </div>
@@ -49,26 +74,15 @@
     <section class="container my-5">
       <div class="call-to-action">
         <h2>Order Your Medicines Online</h2>
-        <p>Fill out the form below or send us a message on WhatsApp for a faster response.</p>
-        <form action="#" method="post" class="row g-3 justify-content-center">
-          <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Full Name" required>
-          </div>
-          <div class="col-md-6">
-            <input type="tel" class="form-control" placeholder="Phone Number" required>
-          </div>
-          <div class="col-12">
-            <input type="email" class="form-control" placeholder="Email Address" required>
-          </div>
-          <div class="col-12">
-            <textarea class="form-control" rows="5" placeholder="Enter your order details here..." required></textarea>
-          </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary btn-lg">Submit Order</button>
-          </div>
+        <p>Fill out the form below and send your order directly via WhatsApp.</p>
+
+        <form id="orderForm">
+          <input type="text" id="name" class="form-control" placeholder="Full Name" required>
+          <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
+          <input type="email" id="email" class="form-control" placeholder="Email Address" required>
+          <textarea id="orderDetails" class="form-control" rows="5" placeholder="Enter your order details here..." required></textarea>
+          <button type="submit" class="btn btn-success btn-lg">Send via WhatsApp</button>
         </form>
-        <p class="mt-4">Or place your order instantly via WhatsApp:</p>
-        <a href="https://wa.me/918100399905" class="btn btn-success btn-lg" target="_blank">WhatsApp Order</a>
       </div>
     </section>
 
@@ -80,5 +94,37 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to handle WhatsApp order -->
+    <script>
+      const form = document.getElementById('orderForm');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const orderDetails = document.getElementById('orderDetails').value.trim();
+
+        if (!name || !phone || !email || !orderDetails) {
+          alert('Please fill all the fields.');
+          return;
+        }
+
+        // Prepare WhatsApp message
+        const message = `Hello Ananiya Pharmacy,%0A%0AMy name is ${encodeURIComponent(name)}.%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0A%0AI would like to place the following order:%0A${encodeURIComponent(orderDetails)}`;
+
+        // WhatsApp link (replace number with your WhatsApp number)
+        const waNumber = "918100399905"; // international format without '+'
+        const waLink = `https://wa.me/${waNumber}?text=${message}`;
+
+        // Open WhatsApp link
+        window.open(waLink, "_blank");
+
+        // Optional: reset form
+        form.reset();
+      });
+    </script>
 </body>
 </html>
