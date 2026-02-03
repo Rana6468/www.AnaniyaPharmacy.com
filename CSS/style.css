@@ -1,0 +1,217 @@
+/* ===========================
+   GENERAL STYLING
+=========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+p {
+    color: #555;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.nav-link.active {
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/* ===========================
+   HERO SECTIONS
+=========================== */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* ===========================
+   SERVICES & TEAM CARDS
+=========================== */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #0d6efd;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   ABOUT & CONTENT SECTIONS
+=========================== */
+section.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   GOOGLE MAPS SECTION
+=========================== */
+.ratio {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   CALL TO ACTION
+=========================== */
+.call-to-action {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.call-to-action h2 {
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.call-to-action p {
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+    .hero-section {
+        height: 350px;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 300px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .call-to-action h2 {
+        font-size: 1.5rem;
+    }
+}
