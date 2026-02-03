@@ -6,13 +6,12 @@
     <title>Online Order | Ananiya Pharmacy</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="Place your medicine and healthcare product orders online with Ananiya Pharmacy easily via form or WhatsApp.">
-    <meta name="keywords" content="Ananiya Pharmacy, online order, medicines, healthcare products, pharmacy order, WhatsApp order">
+    <meta name="description" content="Place your medicine and healthcare product orders online with Ananiya Pharmacy. Quick, safe, and reliable.">
+    <meta name="keywords" content="Ananiya Pharmacy, online order, pharmacy, medicines, healthcare">
     <meta name="author" content="Ananiya Pharmacy">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,8 +30,8 @@
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="online-order.html">Online Order</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            
           </ul>
         </div>
       </div>
@@ -40,82 +39,79 @@
 
     <!-- Hero Section -->
     <header class="hero-section" style="background-image: url('images/order-hero.jpg');">
-      <div class="container hero-overlay text-center">
-        <h1 class="display-4 text-white">Place Your Order Online</h1>
-        <p class="lead text-white">Quick, easy, and safe ordering of medicines and healthcare products.</p>
+      <div class="container hero-overlay">
+        <h1 class="display-4">Place Your Order Online</h1>
+        <p class="lead">Fast, safe, and reliable delivery of medicines and healthcare products.</p>
       </div>
     </header>
 
-    <!-- WhatsApp Order CTA -->
-    <section class="py-5 text-center">
-      <div class="container">
-        <h2>Order via WhatsApp</h2>
-        <p>Send us your order directly on WhatsApp for faster processing.</p>
-        <a href="https://wa.me/911234567890" class="btn btn-success btn-lg" target="_blank">
-          WhatsApp Order Now
-        </a>
-      </div>
-    </section>
-
     <!-- Online Order Form -->
     <section class="container my-5">
-      <h2 class="text-center mb-4">Online Order Form</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form action="https://formsubmit.co/your-email@example.com" method="POST">
-            <!-- Name -->
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-
-            <!-- Email -->
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" name="email">
-            </div>
-
-            <!-- Phone -->
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="phone" name="phone" required>
-            </div>
-
-            <!-- Address -->
-            <div class="mb-3">
-              <label for="address" class="form-label">Delivery Address <span class="text-danger">*</span></label>
-              <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
-            </div>
-
-            <!-- Order Details -->
-            <div class="mb-3">
-              <label for="order" class="form-label">Order Details <span class="text-danger">*</span></label>
-              <textarea class="form-control" id="order" name="order" rows="4" placeholder="List medicines, quantities, and any instructions" required></textarea>
-            </div>
-
-            <!-- Preferred Delivery Time -->
-            <div class="mb-3">
-              <label for="delivery-time" class="form-label">Preferred Delivery Time</label>
-              <input type="text" class="form-control" id="delivery-time" name="delivery-time" placeholder="E.g., Morning / Afternoon / Evening">
-            </div>
-
-            <!-- Submit Button -->
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary btn-lg">Submit Order</button>
-            </div>
-
-            <!-- FormSubmit Hidden Inputs -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-          </form>
-        </div>
+      <div class="call-to-action">
+        <h2>Order Your Medicines Online</h2>
+        <p>Fill out the form below or send us a message on WhatsApp for a faster response.</p>
+        <form action="#" method="post" class="row g-3 justify-content-center">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Phone Number" required>
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" rows="5" placeholder="Enter your order details here..." required></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Submit Order</button>
+          </div>
+        </form>
+        <p class="mt-4">Or place your order instantly via WhatsApp:</p>
+        <a href="https://wa.me/918100399905" class="btn btn-success btn-lg" target="_blank">WhatsApp Order</a>
       </div>
     </section>
 
-    <!-- Safety Note -->
-    <section class="bg-light py-4 text-center">
-      <div class="container">
-        <p class="mb-0"><strong>Note:</strong> Your personal information is used only for order processing. Always consult a healthcare professional for medical advice.</p>
+    <!-- Services Overview -->
+    <section class="container my-5" id="services">
+      <h2 class="text-center mb-4">Our Services</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/prescription-meds.jpg" class="card-img-top" alt="Prescription Medicines">
+            <div class="card-body">
+              <h5 class="card-title">Prescription Medicines</h5>
+              <p class="card-text">Genuine prescription and over-the-counter medicines.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/healthcare-products.jpg" class="card-img-top" alt="Healthcare Products">
+            <div class="card-body">
+              <h5 class="card-title">Healthcare Products</h5>
+              <p class="card-text">Vitamins, supplements, and wellness products.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/professional-guidance.jpg" class="card-img-top" alt="Professional Guidance">
+            <div class="card-body">
+              <h5 class="card-title">Professional Guidance</h5>
+              <p class="card-text">Expert advice from qualified pharmacists you can trust.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-center">
+            <img src="images/fast-service.jpg" class="card-img-top" alt="Fast & Reliable Service">
+            <div class="card-body">
+              <h5 class="card-title">Fast & Reliable Service</h5>
+              <p class="card-text">Quick and safe delivery of medicines and healthcare products.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
