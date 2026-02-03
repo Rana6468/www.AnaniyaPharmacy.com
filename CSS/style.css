@@ -1,1 +1,201 @@
 
+/* ==========================================
+   General Styles
+========================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==========================================
+   Navbar Customization
+========================================== */
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    color: #fff !important;
+}
+
+/* ==========================================
+   Hero Section
+========================================== */
+
+.hero-section, header {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-section::before,
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Overlay */
+    z-index: 1;
+}
+
+.hero-section .container,
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero text */
+.hero-section h1,
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-section p,
+header p {
+    font-size: 1.25rem;
+}
+
+/* Hero button */
+.hero-section .btn,
+header .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn:hover,
+header .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   Services Cards
+========================================== */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card titles */
+.card-title {
+    font-weight: 700;
+}
+
+/* ==========================================
+   Sections
+========================================== */
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+section h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   Google Maps
+========================================== */
+
+.ratio iframe {
+    border-radius: 15px;
+    border: 0;
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+footer {
+    background-color: #0d6efd;
+    color: white;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* ==========================================
+   Responsive Typography
+========================================== */
+
+@media (max-width: 768px) {
+    .hero-section h1,
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section p,
+    header p {
+        font-size: 1rem;
+    }
+    .hero-section .btn,
+    header .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1.25rem;
+    }
+}
